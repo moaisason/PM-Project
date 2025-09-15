@@ -21,7 +21,7 @@ h2 {
 }
 h3 {
   font-family: "Kanit", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 500;
   font-style: normal;  
 }
@@ -39,8 +39,9 @@ p {
   font-size: 64px;
   font-weight: 400;
   font-style: normal;
+  border: 1px solid #000;
+  box-shadow: -5px 5px 5px #000;
 }
-
 /*header*/
 header {
   background-image: url(../images/header.png);
@@ -75,20 +76,33 @@ footer {
 }
 .inter-l{
   font-family: "Inter", sans-serif;
-  font-size: 96px;
-  font-optical-sizing: auto;
-  font-weight: 600;
+  color: #EFF0F2;
+  font-size: 128px;
+  font-weight: 700;
   font-style: normal;
   text-align: center;
-  margin-top: 14rem;
+  margin-top: 9rem;
   max-width: 30%;
   font-variant-caps: all-small-caps;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000,
+    -5px 5px 5px #000;
 }
 .bungee-l {
   font-family: "Bungee", sans-serif;
+  color: #EFF0F2;
   font-size: 64px;
   font-weight: 400;
   font-style: normal;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px  1px 0 #000,
+    1px  1px 0 #000,
+    -5px 5px 5px #000;
 }
 .inter-s {
   display: none;
@@ -108,6 +122,39 @@ footer {
   margin: 5rem auto;
   max-width: 45%;
 }
+.cta-index {
+  margin-top: 5rem;
+  transition: all 0.3s ease;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #C544A0,
+      0 0 40px #C544A0,
+      0 0 60px #C544A0,
+      0 0 80px #C544A0,
+      0 0 100px #C544A0;
+  }
+  to {
+    text-shadow: 
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #ff85d1,
+      0 0 60px #ff85d1,
+      0 0 90px #ff85d1,
+      0 0 120px #ff85d1,
+      0 0 150px #ff85d1;
+  }
+}
+.cta-index:hover {
+background-color: #c544a0;
+}
 .exhibitions {
   background-color: #5ec2dc;
   padding: 5rem 10rem;
@@ -123,19 +170,49 @@ footer {
 }
 .cta-events {
   margin-bottom: 5rem;
+  transition: all 0.3s ease;
+  background-color: #EFF0F2;
+}
+.cta-events:hover {
+  text-shadow: 
+  0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 40px #5EC2DC,
+  0 0 80px #5EC2DC,
+  0 0 100px #5EC2DC;
 }
 .picture-gallery {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 70%;
+  max-width: 80%;
 }
 .cta-explore {
-
+  margin-right: 2rem;
+  background-color:#EFF0F2;
+  transition: all 0.3s ease;
+}
+.cta-explore:hover {
+  text-shadow: 
+  0 0 10px #fff,
+  0 0 20px #d53c50,
+  0 0 40px #d53c50,
+  0 0 80px #d53c50,
+  0 0 100px #d53c50;
 }
 .cta-involve {
-
+  margin-left: 2rem;
+  background-color: #EFF0F2;
+  transition: all 0.3s ease;
+}
+.cta-involve:hover {
+  text-shadow: 
+  0 0 10px #fff,
+  0 0 20px #fdcf5f,
+  0 0 40px #fdcf5f,
+  0 0 80px #fdcf5f,
+  0 0 100px #fdcf5f;
 }
 .buttons {
   margin-bottom: 5rem;
@@ -219,9 +296,19 @@ footer {
 }
 .cta-page-explore, .cta-page-involve {
   margin-top: 5rem;
+  background-color: #EFF0F2;
   display: block;
   margin-left: auto;
   margin-right: 0;
+  transition: all 0.3s ease;
+}
+.cta-page-involve:hover, .cta-page-explore:hover {
+  text-shadow: 
+  0 0 10px #fff,
+  0 0 20px #c544a0,
+  0 0 40px #c544a0,
+  0 0 80px #c544a0,
+  0 0 100px #c544a0;
 }
 
 /*involve page*/
