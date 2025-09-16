@@ -33,6 +33,7 @@ p {
 }
 .text {
   padding: 0rem 1rem;
+  max-width: 1352px;
 }
 .cta {
   font-family: "Bungee Shade", sans-serif;
@@ -45,6 +46,7 @@ p {
 /*header*/
 header {
   background-image: url(../images/header.png);
+  display: flex;
   padding: 3rem;
   min-height: 100px;
 }
@@ -155,13 +157,27 @@ footer {
 .cta-index:hover {
 background-color: #c544a0;
 }
-.exhibitions {
+.exhibitions-index {
   background-color: #5ec2dc;
   padding: 5rem 10rem;
   margin-top: 5rem;
   margin-bottom: 2rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+.cta-exhibitions {
+  margin-bottom: 5rem;
+  transition: all 0.3s ease;
+  background-color: #EFF0F2;
+}
+.cta-exhibitions:hover {
+  text-shadow: 
+  0 0 10px #fff,
+  0 0 20px #0041BB,
+  0 0 40px #0041BB,
+  0 0 80px #0041BB,
+  0 0 100px #0041BB;
 }
 .actions {
   display: flex;
@@ -302,7 +318,7 @@ background-color: #c544a0;
   margin-right: 0;
   transition: all 0.3s ease;
 }
-.cta-page-involve:hover, .cta-page-explore:hover {
+.cta-page-involve:hover, .cta-page-explore:hover, .cta-page-exhibits:hover{
   text-shadow: 
   0 0 10px #fff,
   0 0 20px #c544a0,
@@ -324,8 +340,42 @@ background-color: #c544a0;
   background-color: #fdcf5f;
 }
 
-
-
+/*exhibitions page*/
+.our-exhibitions {
+  padding-left: 15rem;
+}
+.exhibitions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.biology, .cosmology, .evolution, .robotics-ai, .ecology {
+  background-color: #F6BFC5;
+  padding: 5rem 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cosmology {
+  background-color: #0041bb;
+}
+.evolution {
+  background-color: #eb4922;
+}
+.robotics-ai {
+  background-color: #dfdfd2;
+}
+.ecology {
+  background-color: #0041BB;
+}
+.cta-page-exhibits {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: 16rem;
+  transition: all 0.3s ease;
+}
 
 
 /*responsive layput*/
@@ -352,7 +402,7 @@ background-color: #c544a0;
 
   /*header*/
   header {
-  width: fit-screen;
+
   }
   .logo {
     display: flex;
@@ -362,13 +412,13 @@ background-color: #c544a0;
 
   /*footer*/
   .tiles {
-  width: fit-screen;
+
   }
   .icons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 10rem;
+    padding: 3rem 8rem;
   }
   .copy-l {
     display: none;
@@ -384,7 +434,6 @@ background-color: #c544a0;
   .inter-s {
     font-family: "Inter", sans-serif;
     font-size: 96px;
-    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     text-align: center;
@@ -475,5 +524,19 @@ background-color: #c544a0;
   /*involve page*/
   .support, .volunteer, .internships {
     margin-bottom: 2rem;
+  }
+  /*exhibitions page*/
+  .our-exhibitions {
+    padding-left: 2rem;
+}
+  .exhibitions {
+
+}
+  .biology, .cosmology, .evolution, .robotics-ai, .ecology {
+    padding: 0rem 2rem 2rem 2rem;
+  }
+  .cta-page-exhibits {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
