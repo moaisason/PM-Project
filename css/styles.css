@@ -15,12 +15,6 @@ h1 {
 }
 h2 {
   font-family: "Kanit", sans-serif;
-  font-size: 64px;
-  font-weight: 500;
-  font-style: normal;
-}
-h3 {
-  font-family: "Kanit", sans-serif;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;  
@@ -43,6 +37,10 @@ p {
   border: 1px solid #000;
   box-shadow: -5px 5px 5px #000;
 }
+a {
+  text-decoration: none;
+}
+
 /*header*/
 header {
   background-image: url(../images/header.png);
@@ -56,8 +54,12 @@ header {
 }
 
 /*footer*/
+.foot-tiles {
+  background-image: url(../images/footer.png);
+  min-height: 200px;
+}
 footer {
-  min-height: 150px;
+
 }
 .icons {
   display: flex;
@@ -167,7 +169,7 @@ background-color: #c544a0;
   align-items: center;
 }
 .cta-exhibitions {
-  margin-bottom: 5rem;
+  margin-top: 2rem;
   transition: all 0.3s ease;
   background-color: #EFF0F2;
 }
@@ -231,6 +233,7 @@ background-color: #c544a0;
   0 0 100px #fdcf5f;
 }
 .buttons {
+  margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
@@ -291,6 +294,9 @@ background-color: #c544a0;
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+.img-s {
+  display: none;
 }
 
 /*explore page*/
@@ -394,7 +400,7 @@ background-color: #c544a0;
     font-size: 36px;
   }
   h2 {
-    font-size: 32px;
+    font-size: 20px;
   }
   .cta {
     font-size: 32px;
@@ -411,14 +417,11 @@ background-color: #c544a0;
   }
 
   /*footer*/
-  .tiles {
-
-  }
   .icons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 8rem;
+    padding: 3rem 7rem;
   }
   .copy-l {
     display: none;
@@ -453,17 +456,26 @@ background-color: #c544a0;
     max-width: 100%;
     margin: 1rem 1rem 2rem 1rem;
   }
-  .exhibitions {
-
+  .exhibitions-index {
+    padding: 2rem 0rem;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+    align-items: center;
   }
   .actions {
 
   }
   .cta-events {
-
+    margin: 0rem 2rem 5rem 2rem;
   }
   .cta-explore {
     margin-bottom: 2rem;
+    margin-right: 0rem;
+  }
+  .cta-involve {
+    margin-left: 0rem;
   }
   .buttons {
     display: flex;
@@ -497,13 +509,16 @@ background-color: #c544a0;
     flex-direction: column;
   }
   .events-text {
-    width: 380px;
+    background-color: #EFF0F2;
+    height: auto;
+    padding: 0rem;
     margin-bottom: 2rem;
   }
   .events-gallery {
+    display: none
+  }
+  .img-s {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
   }
 
   /*explore page*/
@@ -533,7 +548,7 @@ background-color: #c544a0;
 
 }
   .biology, .cosmology, .evolution, .robotics-ai, .ecology {
-    padding: 0rem 2rem 2rem 2rem;
+    padding: 2rem;
   }
   .cta-page-exhibits {
     margin-left: auto;
