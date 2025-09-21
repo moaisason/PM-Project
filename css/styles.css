@@ -58,9 +58,6 @@ header {
   background-image: url(../images/footer.png);
   min-height: 200px;
 }
-footer {
-
-}
 .icons {
   display: flex;
   justify-content: space-between;
@@ -240,15 +237,19 @@ background-color: #c544a0;
 /*visit page*/
 .visit {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
+  align-items: stretch;
   gap: 2rem;
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 .information {
   grid-column: 1;
   grid-row: 1 / 3;
-  width: 467px;
+  width: 100%;
+
 }
 .information, .hours {
   color: #EFF0F2;
@@ -259,7 +260,8 @@ background-color: #c544a0;
   background-color: #0041bb;
   grid-column: 3;
   grid-row: 2;
-  width: 336px;
+  width: 100%;
+  max-width: 400px;
 }
 .map{
   grid-column: 2 / span 2;
@@ -270,7 +272,17 @@ background-color: #c544a0;
   grid-row: 2;
   justify-self: center;
   align-self: start;
-  max-width: 480px; 
+  width: 100%;
+
+}
+.information,
+.hours,
+.map,
+.calender {
+  color: #EFF0F2;
+  padding: 1rem;
+  box-sizing: border-box; /* så padding inte förstör bredden */
+  height: 100%; /* fyll cellen */
 }
 
 /*events page*/
@@ -364,6 +376,7 @@ background-color: #c544a0;
 }
 .cosmology {
   background-color: #0041bb;
+  color: #EFF0F2;
 }
 .evolution {
   background-color: #eb4922;
@@ -373,6 +386,7 @@ background-color: #c544a0;
 }
 .ecology {
   background-color: #0041BB;
+  color: #EFF0F2;
 }
 .cta-page-exhibits {
   margin-top: 5rem;
@@ -388,6 +402,9 @@ background-color: #c544a0;
 @media screen and (max-width: 768px) {
   /*all pages*/
   .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 0rem 2rem;
   }
   .inter {
@@ -407,9 +424,6 @@ background-color: #c544a0;
   }
 
   /*header*/
-  header {
-
-  }
   .logo {
     display: flex;
     align-items: center;
@@ -464,9 +478,6 @@ background-color: #c544a0;
     height: auto;
     align-items: center;
   }
-  .actions {
-
-  }
   .cta-events {
     margin: 0rem 2rem 5rem 2rem;
   }
@@ -485,28 +496,32 @@ background-color: #c544a0;
 
   /*visit page*/
   .visit {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 5rem;
-  }
-  .information {
-    width: 380px;
-    margin-top: 0rem;
+    grid-template-columns: 1fr;
   }
   .hours {
-    width: 380px;
+    margin-bottom: 5rem;
   }
-  .map{
-
-  }
-  .calender {
-
+  .information, .hours, .map, .calender {
+    grid-column: 1;
+    grid-row: auto;
+    max-width: 100%;
   }
 
   /*events page*/
   .specials {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+  .specials img {
+
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  .specials > div {
+    max-width: 320px;
+    width: 100%;
   }
   .events-text {
     background-color: #EFF0F2;
@@ -543,9 +558,6 @@ background-color: #c544a0;
   /*exhibitions page*/
   .our-exhibitions {
     padding-left: 2rem;
-}
-  .exhibitions {
-
 }
   .biology, .cosmology, .evolution, .robotics-ai, .ecology {
     padding: 2rem;
